@@ -562,3 +562,48 @@ body.no-scroll {
         transition: none;
     }
 }
+
+/* ===== Selector de idioma ===== */
+.lang-switch {
+    display: flex;
+    gap: 6px;
+}
+
+.lang-switch button {
+    display: flex;
+    padding: 2px;
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.lang-switch button:hover {
+    background: none;
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+.lang-switch button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.lang-switch button[aria-pressed="true"] {
+    border-color: #fff;
+    opacity: 1;
+}
+
+.lang-switch img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+/* Mientras se aplica un idioma guardado distinto del español */
+.i18n-pending body {
+    visibility: hidden;
+}

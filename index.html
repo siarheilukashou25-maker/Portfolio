@@ -3,169 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio profesional de Siarhei Lukashou - Desarrollador Unity y de aplicaciones multiplataforma">
-    <title>Mi Portfolio - Desarrollador De Videojuegos</title>
+    <meta name="description" content="Portfolio de Siarhei Lukashou, desarrollador Unity y de aplicaciones multiplataforma con más de 3 años de experiencia en videojuegos y apps móviles con C#." data-i18n-attr="content:index.meta">
+    <meta name="author" content="Siarhei Lukashou">
+    <title data-i18n="index.title">Mi Portfolio - Desarrollador De Videojuegos</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        // Oculta la página hasta aplicar el idioma guardado (evita ver el español un instante)
+        try {
+            var savedLang = localStorage.getItem("lang");
+            if (savedLang && savedLang !== "es") {
+                document.documentElement.classList.add("i18n-pending");
+                // Por si js/i18n.js no se carga: la página no se queda oculta
+                setTimeout(function () {
+                    document.documentElement.classList.remove("i18n-pending");
+                }, 1500);
+            }
+        } catch (e) {}
+    </script>
     <link rel="canonical" href="https://lukashou.pages.dev/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Portfolio de Siarhei Lukashou">
     <meta property="og:locale" content="es_ES">
     <meta property="og:title" content="Siarhei Lukashou - Unity Developer">
-    <meta property="og:description" content="Portfolio profesional de Siarhei Lukashou - Desarrollador Unity y de aplicaciones multiplataforma">
+    <meta property="og:description" content="Portfolio de Siarhei Lukashou, desarrollador Unity y de aplicaciones multiplataforma con más de 3 años de experiencia en videojuegos y apps móviles con C#." data-i18n-attr="content:index.meta">
     <meta property="og:url" content="https://lukashou.pages.dev/">
-    <meta property="og:image" content="https://lukashou.pages.dev/images/og-image.jpg">
+    <meta property="og:image" content="https://lukashou.pages.dev/images/og-image-v2.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="627">
     <meta property="og:image:alt" content="Siarhei Lukashou - Unity Developer y desarrollo de aplicaciones multiplataforma">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://lukashou.pages.dev/images/og-image-v2.jpg">
 </head>
 <body>
     <header>
-        <h1>Mi Portfolio</h1>
+        <h1 data-i18n="site.title">Mi Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="index.html" aria-current="page">Inicio</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="index.html" aria-current="page" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="proyectos.html" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
+        <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.label">
+            <button type="button" data-lang="ru" lang="ru" aria-label="Русский" title="Русский" aria-pressed="false"><img src="images/flags/ru.svg" alt="" width="28" height="28"></button>
+            <button type="button" data-lang="en" lang="en" aria-label="English" title="English" aria-pressed="false"><img src="images/flags/gb.svg" alt="" width="28" height="28"></button>
+            <button type="button" data-lang="es" lang="es" aria-label="Español" title="Español" aria-pressed="true"><img src="images/flags/es.svg" alt="" width="28" height="28"></button>
+            <button type="button" data-lang="be" lang="be" aria-label="Беларуская" title="Беларуская" aria-pressed="false"><img src="images/flags/by.svg" alt="" width="28" height="28"></button>
+        </div>
     </header>
 
     <main>
         <section class="hero">
             <figure>
-                <img src="images/foto-perfil.jpg" alt="Foto de Siarhei Lukashou" width="200" height="200">
-                <figcaption>Mi foto</figcaption>
+                <img src="images/foto-perfil.jpg" alt="Foto de Siarhei Lukashou" width="200" height="200" data-i18n-attr="alt:index.photoAlt">
+                <figcaption data-i18n="index.photoCaption">Mi foto</figcaption>
             </figure>
             <div>
                 <h1>Lukashou Siarhei</h1>
-                <p class="role">Unity Developer · Desarrollo de Aplicaciones Multiplataforma</p>
-                <p>Más de 3 años de experiencia en desarrollo de aplicaciones y videojuegos móviles con Unity y C#.</p>
-                <p>Sevilla, España</p>
+                <p class="role" data-i18n="index.role">Unity Developer · Desarrollo de Aplicaciones Multiplataforma</p>
+                <p data-i18n="index.heroExp">Más de 3 años de experiencia en desarrollo de aplicaciones y videojuegos móviles con Unity y C#.</p>
+                <p data-i18n="common.location">Sevilla, España</p>
             </div>
         </section>
 
         <section>
-            <h2>Quién Soy</h2>
-            <p>Desarrollador Unity con más de 3 años de experiencia profesional en el desarrollo de aplicaciones y videojuegos para dispositivos móviles con Unity y C#.</p>
-            <p>He participado en proyectos durante todo el ciclo de desarrollo: implementación de mecánicas y funcionalidades, desarrollo de interfaces, optimización del rendimiento, corrección de errores y soporte para releases. Durante el último año he trabajado en proyectos Unity orientados a producción dentro de un entorno ágil y dinámico.</p>
-            <p>Soy graduado de la <a href="https://www.bsuir.by/en/">Belarusian State University of Informatics and Radioelectronics (BSUIR)</a> y actualmente estudio DAM (Desarrollo de Aplicaciones Multiplataforma) en Campus Cámara FP Sevilla. También he realizado prácticas en Versus e-Learning, donde he adquirido experiencia adicional en desarrollo de software con ASP.NET y MySQL.</p>
-            <p>Busco seguir creciendo como desarrollador, ampliar mis conocimientos en desarrollo de aplicaciones y participar en proyectos donde pueda combinar mi experiencia con Unity con nuevas tecnologías y herramientas.</p>
+            <h2 data-i18n="index.about.title">Quién Soy</h2>
+            <p data-i18n="index.about.p1">Desarrollador Unity con más de 3 años de experiencia profesional en el desarrollo de aplicaciones y videojuegos para dispositivos móviles con Unity y C#.</p>
+            <p data-i18n="index.about.p2">He participado en proyectos durante todo el ciclo de desarrollo: implementación de mecánicas y funcionalidades, desarrollo de interfaces, optimización del rendimiento, corrección de errores y soporte para releases. Durante el último año he trabajado en proyectos Unity orientados a producción dentro de un entorno ágil y dinámico.</p>
+            <p data-i18n="index.about.p3">Soy graduado de la <a href="https://www.bsuir.by/en/">Belarusian State University of Informatics and Radioelectronics (BSUIR)</a> y actualmente estudio DAM (Desarrollo de Aplicaciones Multiplataforma) en Campus Cámara FP Sevilla. También he realizado prácticas en Versus e-Learning, donde he adquirido experiencia adicional en desarrollo de software con ASP.NET y MySQL.</p>
+            <p data-i18n="index.about.p4">Busco seguir creciendo como desarrollador, ampliar mis conocimientos en desarrollo de aplicaciones y participar en proyectos donde pueda combinar mi experiencia con Unity con nuevas tecnologías y herramientas.</p>
         </section>
 
         <section>
-            <h2>Experiencia Profesional</h2>
+            <h2 data-i18n="index.exp.title">Experiencia Profesional</h2>
             <ol class="timeline">
                 <li>
                     <h3>Unity Developer · Syndicate Group</h3>
-                    <p class="meta">Abr 2025 - May 2026 · Jornada completa · En remoto</p>
+                    <p class="meta" data-i18n="index.exp.syndicate.meta">Abr 2025 - May 2026 · Jornada completa · En remoto</p>
                     <ul>
-                        <li>Desarrollo de aplicaciones móviles para iOS y Android orientadas a la industria del entretenimiento y gaming.</li>
-                        <li>Integración de WebView y sistemas de redirección basados en el origen del usuario.</li>
-                        <li>Lógica para ofrecer contenido y experiencias diferentes según los parámetros de adquisición.</li>
-                        <li>Preparación, optimización y publicación de aplicaciones en Google Play y App Store.</li>
+                        <li data-i18n="index.exp.syndicate.1">Desarrollo de aplicaciones móviles para iOS y Android orientadas a la industria del entretenimiento y gaming.</li>
+                        <li data-i18n="index.exp.syndicate.2">Integración de WebView y sistemas de redirección basados en el origen del usuario.</li>
+                        <li data-i18n="index.exp.syndicate.3">Lógica para ofrecer contenido y experiencias diferentes según los parámetros de adquisición.</li>
+                        <li data-i18n="index.exp.syndicate.4">Preparación, optimización y publicación de aplicaciones en Google Play y App Store.</li>
                     </ul>
                 </li>
                 <li>
                     <h3>Multiplatform App Developer · Versus e-Learning Group</h3>
-                    <p class="meta">Ene 2026 - Feb 2026 · FP Dual (prácticas) · Sevilla</p>
+                    <p class="meta" data-i18n="index.exp.versus.meta">Ene 2026 - Feb 2026 · FP Dual (prácticas) · Sevilla</p>
                     <ul>
-                        <li>Desarrollo y mantenimiento de una aplicación interna para la gestión de estudiantes con ASP.NET MVC y MySQL.</li>
-                        <li>Sistema de notificaciones por correo electrónico con diferentes tipos de avisos.</li>
-                        <li>Nuevas funcionalidades, diseño de la interfaz, depuración y corrección de errores.</li>
+                        <li data-i18n="index.exp.versus.1">Desarrollo y mantenimiento de una aplicación interna para la gestión de estudiantes con ASP.NET MVC y MySQL.</li>
+                        <li data-i18n="index.exp.versus.2">Sistema de notificaciones por correo electrónico con diferentes tipos de avisos.</li>
+                        <li data-i18n="index.exp.versus.3">Nuevas funcionalidades, diseño de la interfaz, depuración y corrección de errores.</li>
                     </ul>
                 </li>
                 <li>
                     <h3>Unity Developer · Elephant Games</h3>
-                    <p class="meta">Ago 2024 - Ene 2025 · Jornada completa · En remoto</p>
+                    <p class="meta" data-i18n="index.exp.elephant.meta">Ago 2024 - Ene 2025 · Jornada completa · En remoto</p>
                 </li>
                 <li>
                     <h3>Unity Developer · NVDevelopers</h3>
-                    <p class="meta">Abr 2021 - Ago 2021 · Jornada completa · Minsk</p>
+                    <p class="meta" data-i18n="index.exp.nv.meta">Abr 2021 - Ago 2021 · Jornada completa · Minsk</p>
                 </li>
                 <li>
                     <h3>Unity Developer · Gismart</h3>
-                    <p class="meta">Dic 2020 - Feb 2021 · Jornada completa · Minsk</p>
+                    <p class="meta" data-i18n="index.exp.gismart.meta">Dic 2020 - Feb 2021 · Jornada completa · Minsk</p>
                 </li>
                 <li>
                     <h3>Unity Developer · WeRGames</h3>
-                    <p class="meta">Dic 2019 - Oct 2020 · Jornada completa · Minsk</p>
+                    <p class="meta" data-i18n="index.exp.wer.meta">Dic 2019 - Oct 2020 · Jornada completa · Minsk</p>
                     <ul>
-                        <li>Desarrollo de videojuegos con Unity y C#: mecánicas, gameplay, UI y sistemas.</li>
-                        <li>Único desarrollador en la primera etapa del proyecto (startup).</li>
-                        <li>Git, Trello, integración de SDKs de analítica y servicios externos.</li>
-                        <li>Builds, lanzamientos y mantenimiento de juegos en Google Play y App Store.</li>
+                        <li data-i18n="index.exp.wer.1">Desarrollo de videojuegos con Unity y C#: mecánicas, gameplay, UI y sistemas.</li>
+                        <li data-i18n="index.exp.wer.2">Único desarrollador en la primera etapa del proyecto (startup).</li>
+                        <li data-i18n="index.exp.wer.3">Git, Trello, integración de SDKs de analítica y servicios externos.</li>
+                        <li data-i18n="index.exp.wer.4">Builds, lanzamientos y mantenimiento de juegos en Google Play y App Store.</li>
                     </ul>
                 </li>
                 <li>
                     <h3>QA Tester · Vizor Games</h3>
-                    <p class="meta">Jun 2019 - Ago 2020 · Jornada parcial · Minsk</p>
+                    <p class="meta" data-i18n="index.exp.vizor.meta">Jun 2019 - Ago 2020 · Jornada parcial · Minsk</p>
                 </li>
             </ol>
         </section>
 
         <section>
-            <h2>Formación Académica</h2>
+            <h2 data-i18n="index.edu.title">Formación Académica</h2>
             <ol class="timeline">
                 <li>
-                    <h3>Formación Profesional de Grado Superior</h3>
-                    <p class="meta">Centro FP Superior de la Cámara de Comercio de Sevilla · Sep 2025 - Jun 2027</p>
-                    <p>Desarrollo de Aplicaciones Multiplataforma (DAM)</p>
+                    <h3 data-i18n="index.edu.fp.title">Formación Profesional de Grado Superior</h3>
+                    <p class="meta" data-i18n="index.edu.fp.meta">Centro FP Superior de la Cámara de Comercio de Sevilla · Sep 2025 - Jun 2027</p>
+                    <p data-i18n="index.edu.fp.degree">Desarrollo de Aplicaciones Multiplataforma (DAM)</p>
                 </li>
                 <li>
-                    <h3>Estudios Universitarios</h3>
-                    <p class="meta"><a href="https://www.bsuir.by/en/">BSUIR</a>, Minsk · Sep 2017 - Jul 2021</p>
-                    <p>Sistemas y Tecnologías de la Información (en la industria de los videojuegos)</p>
+                    <h3 data-i18n="index.edu.uni.title">Estudios Universitarios</h3>
+                    <p class="meta" data-i18n="index.edu.uni.meta"><a href="https://www.bsuir.by/en/">BSUIR</a>, Minsk · Sep 2017 - Jul 2021</p>
+                    <p data-i18n="index.edu.uni.degree">Sistemas y Tecnologías de la Información (en la industria de los videojuegos)</p>
                 </li>
             </ol>
         </section>
 
         <section>
-            <h2>Mis Habilidades Profesionales</h2>
+            <h2 data-i18n="index.skills.title">Mis Habilidades Profesionales</h2>
             <ul class="tags">
                 <li>Unity3D</li>
                 <li>C#</li>
                 <li>Java</li>
                 <li>ASP.NET MVC</li>
                 <li>MySQL</li>
-                <li>Aplicaciones y videojuegos móviles</li>
+                <li data-i18n="index.skills.mobile">Aplicaciones y videojuegos móviles</li>
                 <li>UI/UX</li>
-                <li>Optimización de rendimiento</li>
-                <li>XML, JSON y serialización de datos</li>
+                <li data-i18n="index.skills.perf">Optimización de rendimiento</li>
+                <li data-i18n="index.skills.data">XML, JSON y serialización de datos</li>
                 <li>Git, GitHub, GitLab, Bitbucket</li>
                 <li>DOTween</li>
                 <li>SOLID</li>
-                <li>Integraciones de SDK</li>
-                <li>Publicación en Google Play / App Store</li>
+                <li data-i18n="index.skills.sdk">Integraciones de SDK</li>
+                <li data-i18n="index.skills.publish">Publicación en Google Play / App Store</li>
                 <li>Agile / Scrum</li>
-                <li>Debugging y resolución de problemas</li>
+                <li data-i18n="index.skills.debug">Debugging y resolución de problemas</li>
             </ul>
         </section>
 
         <section>
-            <h2>Idiomas</h2>
+            <h2 data-i18n="index.langs.title">Idiomas</h2>
             <ul class="tags">
-                <li>Bielorruso (nativo)</li>
-                <li>Ruso (nativo)</li>
-                <li>Español (nativo)</li>
-                <li>Inglés (B2)</li>
+                <li data-i18n="index.langs.be">Bielorruso (nativo)</li>
+                <li data-i18n="index.langs.ru">Ruso (nativo)</li>
+                <li data-i18n="index.langs.es">Español (nativo)</li>
+                <li data-i18n="index.langs.en">Inglés (B2)</li>
             </ul>
         </section>
 
         <section>
-            <h2>Mis Intereses</h2>
+            <h2 data-i18n="index.interests.title">Mis Intereses</h2>
             <ul class="tags">
-                <li>Desarrollo de videojuegos</li>
-                <li>Desarrollo de aplicaciones multiplataforma</li>
+                <li data-i18n="index.interests.gamedev">Desarrollo de videojuegos</li>
+                <li data-i18n="index.interests.apps">Desarrollo de aplicaciones multiplataforma</li>
                 <li>Unity</li>
                 <li>C#</li>
-                <li>Jugar a videojuegos</li>
+                <li data-i18n="index.interests.play">Jugar a videojuegos</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Lukashou Siarhei. Todos los derechos reservados.</p>
+        <p data-i18n="footer.rights">&copy; 2026 Lukashou Siarhei. Todos los derechos reservados.</p>
         <div>
             <ol>
                 <li><a href="https://www.linkedin.com/in/sergei-lukashov/">LinkedIn</a></li>
@@ -174,5 +195,6 @@
             </ol>
         </div>
     </footer>
+    <script src="js/i18n.js" defer></script>
 </body>
 </html>

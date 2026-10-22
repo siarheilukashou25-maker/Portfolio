@@ -13,6 +13,8 @@ Sitio web personal de Siarhei Lukashou, desarrollador de videojuegos en Unity y 
   - Proyectos académicos del ciclo DAM, con enlaces a GitHub.
 - **`contacto.html` (Contacto):** formulario que envía los mensajes por email mediante FormSubmit, y otros medios de contacto.
 
+El sitio está disponible en español (idioma por defecto), inglés, ruso y bielorruso. El idioma se elige con las banderas de la cabecera y se recuerda al navegar entre páginas.
+
 ## Estructura del repositorio
 
 ```text
@@ -23,8 +25,10 @@ Sitio web personal de Siarhei Lukashou, desarrollador de videojuegos en Unity y 
 ├── css/
 │   └── styles.css             estilos de todo el sitio
 ├── js/
+│   ├── i18n.js                cambio de idioma del sitio (es, en, ru, be) y traducciones
 │   └── gallery.js             ampliación de las capturas en la galería de juegos
-├── images/                    foto de perfil y capturas de los juegos
+├── images/                    foto de perfil, capturas de los juegos e imagen para redes sociales
+│   └── flags/                 banderas del selector de idioma
 ├── GameOnCocos/               build web de Cocos Creator del playable ad (se muestra en proyectos.html)
 └── README.md                  este archivo
 ```
@@ -50,6 +54,10 @@ python3 -m http.server 8000
 Después abre http://localhost:8000 en el navegador.
 
 El juego de Cocos Creator necesita un servidor HTTP y no carga si se abre el archivo con doble clic. En GitHub Pages o en cualquier hosting estático funciona sin configuración adicional.
+
+## Créditos
+
+Banderas: [circle-flags](https://github.com/HatScripts/circle-flags) (licencia MIT).
 
 ## Autor
 

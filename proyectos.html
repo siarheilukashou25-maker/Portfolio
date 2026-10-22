@@ -3,57 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de proyectos - Conoce mis trabajos de desarrollo de videojuegos y aplicaciones">
-    <title>Mis Proyectos - Portfolio</title>
+    <meta name="description" content="Proyectos de Siarhei Lukashou: videojuegos móviles en Unity publicados en Google Play, un playable ad jugable en el navegador y proyectos académicos de DAM." data-i18n-attr="content:projects.meta">
+    <meta name="author" content="Siarhei Lukashou">
+    <title data-i18n="projects.title">Mis Proyectos - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        // Oculta la página hasta aplicar el idioma guardado (evita ver el español un instante)
+        try {
+            var savedLang = localStorage.getItem("lang");
+            if (savedLang && savedLang !== "es") {
+                document.documentElement.classList.add("i18n-pending");
+                // Por si js/i18n.js no se carga: la página no se queda oculta
+                setTimeout(function () {
+                    document.documentElement.classList.remove("i18n-pending");
+                }, 1500);
+            }
+        } catch (e) {}
+    </script>
     <link rel="canonical" href="https://lukashou.pages.dev/proyectos">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Portfolio de Siarhei Lukashou">
     <meta property="og:locale" content="es_ES">
     <meta property="og:title" content="Proyectos - Siarhei Lukashou">
-    <meta property="og:description" content="Portfolio de proyectos - Conoce mis trabajos de desarrollo de videojuegos y aplicaciones">
+    <meta property="og:description" content="Proyectos de Siarhei Lukashou: videojuegos móviles en Unity publicados en Google Play, un playable ad jugable en el navegador y proyectos académicos de DAM." data-i18n-attr="content:projects.meta">
     <meta property="og:url" content="https://lukashou.pages.dev/proyectos">
-    <meta property="og:image" content="https://lukashou.pages.dev/images/og-image.jpg">
+    <meta property="og:image" content="https://lukashou.pages.dev/images/og-image-v2.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="627">
     <meta property="og:image:alt" content="Siarhei Lukashou - Unity Developer y desarrollo de aplicaciones multiplataforma">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://lukashou.pages.dev/images/og-image-v2.jpg">
 </head>
 <body>
     <header>
-        <h1>Mi Portfolio</h1>
+        <h1 data-i18n="site.title">Mi Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="proyectos.html" aria-current="page" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
+        <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.label">
+            <button type="button" data-lang="ru" lang="ru" aria-label="Русский" title="Русский" aria-pressed="false"><img src="images/flags/ru.svg" alt="" width="28" height="28"></button>
+            <button type="button" data-lang="en" lang="en" aria-label="English" title="English" aria-pressed="false"><img src="images/flags/gb.svg" alt="" width="28" height="28"></button>
+            <button type="button" data-lang="es" lang="es" aria-label="Español" title="Español" aria-pressed="true"><img src="images/flags/es.svg" alt="" width="28" height="28"></button>
+            <button type="button" data-lang="be" lang="be" aria-label="Беларуская" title="Беларуская" aria-pressed="false"><img src="images/flags/by.svg" alt="" width="28" height="28"></button>
+        </div>
     </header>
 
     <main>
-        <h1>Mis Proyectos</h1>
-        <p>Una selección de mis trabajos más recientes en desarrollo de videojuegos y aplicaciones</p>
+        <h1 data-i18n="projects.heading">Mis Proyectos</h1>
+        <p data-i18n="projects.intro">Una selección de mis trabajos más recientes en desarrollo de videojuegos y aplicaciones</p>
 
         <article>
             <header>
                 <h2>By Me Too! / Cómprame!</h2>
             </header>
-            <p>Aplicación móvil para gestionar compras compartidas y repartir los gastos entre personas que viven juntas. Permite crear grupos de convivencia, registrar compras (compartidas, personales o entre varios miembros) y calcular automáticamente cuánto debe pagar cada persona por semana o por mes.</p>
-            <p>Proyecto de fin de ciclo DAM, desarrollado en Java por un equipo de 4 personas con metodología Scrum.</p>
-            <p><a href="https://github.com/siarheilukashou25-maker/By-Me-Too">Código en GitHub</a> · <a href="https://github.com/siarheilukashou25-maker/Proyecto-Intermodular-By-Me-Too">Documentación y tablero Kanban</a></p>
+            <p data-i18n="projects.bmt.p1">Aplicación móvil para gestionar compras compartidas y repartir los gastos entre personas que viven juntas. Permite crear grupos de convivencia, registrar compras (compartidas, personales o entre varios miembros) y calcular automáticamente cuánto debe pagar cada persona por semana o por mes.</p>
+            <p data-i18n="projects.bmt.p2">Proyecto de fin de ciclo DAM, desarrollado en Java por un equipo de 4 personas con metodología Scrum.</p>
+            <p data-i18n="projects.bmt.links"><a href="https://github.com/siarheilukashou25-maker/By-Me-Too" data-i18n="projects.codeOnGithub">Código en GitHub</a> · <a href="https://github.com/siarheilukashou25-maker/Proyecto-Intermodular-By-Me-Too">Documentación y tablero Kanban</a></p>
         </article>
 
         <article>
             <header>
                 <h2>Screw All: 3D Pin Puzzle</h2>
             </header>
-            <p>Desarrollo completo de este videojuego utilizando Unity y C#.</p>
-            <p>En este proyecto trabajé en un equipo con un project lead, un game designer y un artista generalista; yo era el desarrollador. Empezamos con la idea del juego y la mecánica; después, el game designer hizo la documentación de cómo iba a ser el juego y qué había que hacer. Luego, junto con el artista generalista, empezamos a desarrollar y diseñar el juego.</p>
-            <p>Después lo enviamos al equipo de QA (pruebas) para que encontrara todos los fallos (bugs). Tras varias rondas de pruebas, terminamos el proyecto.</p>
+            <p data-i18n="projects.fullDev">Desarrollo completo de este videojuego utilizando Unity y C#.</p>
+            <p data-i18n="projects.screw.team">En este proyecto trabajé en un equipo con un project lead, un game designer y un artista generalista; yo era el desarrollador. Empezamos con la idea del juego y la mecánica; después, el game designer hizo la documentación de cómo iba a ser el juego y qué había que hacer. Luego, junto con el artista generalista, empezamos a desarrollar y diseñar el juego.</p>
+            <p data-i18n="projects.qa">Después lo enviamos al equipo de QA (pruebas) para que encontrara todos los fallos (bugs). Tras varias rondas de pruebas, terminamos el proyecto.</p>
             <figure>
-                <img src="images/ScrewAll.png" alt="Captura del proyecto en Google Play">
-                <figcaption>Captura del juego en Google Play</figcaption>
+                <img src="images/ScrewAll.png" alt="Captura del proyecto en Google Play" data-i18n-attr="alt:projects.gpAlt">
+                <figcaption data-i18n="projects.gpCaption">Captura del juego en Google Play</figcaption>
             </figure>
         </article>
 
@@ -61,65 +82,65 @@
             <header>
                 <h2>Passenger Delivery</h2>
             </header>
-            <p>Desarrollo completo de este videojuego utilizando Unity y C#.</p>
-            <p>En este proyecto trabajé en un equipo con un game designer y un artista generalista; yo era el desarrollador. Empezamos con la idea del juego y la mecánica; después, el game designer hizo la documentación de cómo iba a ser el juego y qué había que hacer. Luego, junto con el artista generalista, empezamos a desarrollar y diseñar el juego.</p>
-            <p>Después lo enviamos al equipo de QA (pruebas) para que encontrara todos los fallos (bugs). Tras varias rondas de pruebas, terminamos el proyecto.</p>
+            <p data-i18n="projects.fullDev">Desarrollo completo de este videojuego utilizando Unity y C#.</p>
+            <p data-i18n="projects.passenger.team">En este proyecto trabajé en un equipo con un game designer y un artista generalista; yo era el desarrollador. Empezamos con la idea del juego y la mecánica; después, el game designer hizo la documentación de cómo iba a ser el juego y qué había que hacer. Luego, junto con el artista generalista, empezamos a desarrollar y diseñar el juego.</p>
+            <p data-i18n="projects.qa">Después lo enviamos al equipo de QA (pruebas) para que encontrara todos los fallos (bugs). Tras varias rondas de pruebas, terminamos el proyecto.</p>
             <figure>
-                <img src="images/PassengerDelivery.png" alt="Captura del proyecto en Google Play">
-                <figcaption>Captura del juego en Google Play</figcaption>
+                <img src="images/PassengerDelivery.png" alt="Captura del proyecto en Google Play" data-i18n-attr="alt:projects.gpAlt">
+                <figcaption data-i18n="projects.gpCaption">Captura del juego en Google Play</figcaption>
             </figure>
         </article>
 
         <article>
             <header>
-                <h2>Playable Ad en Cocos Creator</h2>
+                <h2 data-i18n="projects.playable.title">Playable Ad en Cocos Creator</h2>
             </header>
-            <p>Anuncio jugable (playable ad) que hice como prueba técnica para una empresa: un pequeño juego de conducción con físicas en el que hay que llevar el coche hasta la meta.</p>
-            <p>Fue mi primera experiencia con Cocos Creator y TypeScript, viniendo de Unity y C#. Puedes jugarlo aquí mismo, directamente en el navegador.</p>
-            <p><a href="https://github.com/EndiKayfman/TestFreePlay">Código en GitHub</a></p>
+            <p data-i18n="projects.playable.p1">Anuncio jugable (playable ad) que hice como prueba técnica para una empresa: un pequeño juego de conducción con físicas en el que hay que llevar el coche hasta la meta.</p>
+            <p data-i18n="projects.playable.p2">Fue mi primera experiencia con Cocos Creator y TypeScript, viniendo de Unity y C#. Puedes jugarlo aquí mismo, directamente en el navegador.</p>
+            <p><a href="https://github.com/EndiKayfman/TestFreePlay" data-i18n="projects.codeOnGithub">Código en GitHub</a></p>
             <figure class="game">
-                <iframe src="GameOnCocos/index.html" title="Playable Ad hecho en Cocos Creator" loading="lazy"></iframe>
-                <figcaption>Juego web hecho en Cocos Creator 3.7 · <a href="GameOnCocos/index.html">Abrir a pantalla completa</a></figcaption>
+                <iframe src="GameOnCocos/index.html" title="Playable Ad hecho en Cocos Creator" loading="lazy" data-i18n-attr="title:projects.playable.frame"></iframe>
+                <figcaption data-i18n="projects.playable.caption">Juego web hecho en Cocos Creator 3.7 · <a href="GameOnCocos/index.html">Abrir a pantalla completa</a></figcaption>
             </figure>
         </article>
 
         <article>
             <header>
-                <h2>Otros proyectos</h2>
+                <h2 data-i18n="projects.other.title">Otros proyectos</h2>
             </header>
-            <p>He desarrollado más de 50 juegos, pero por distintas razones no se publicaron en Google Play o la empresa perdió la cuenta de Google Play por bloqueo.</p>
-            <p>Algunos de ellos:</p>
+            <p data-i18n="projects.other.p1">He desarrollado más de 50 juegos, pero por distintas razones no se publicaron en Google Play o la empresa perdió la cuenta de Google Play por bloqueo.</p>
+            <p data-i18n="projects.other.some">Algunos de ellos:</p>
             <div class="games-grid">
                 <figure>
-                    <img src="images/CyberDistrict.jpg" alt="Captura del juego Cyber District" width="597" height="352" loading="lazy">
+                    <img src="images/CyberDistrict.jpg" alt="Captura del juego Cyber District" data-i18n-attr="alt:gallery.alt" data-i18n-name="Cyber District" width="597" height="352" loading="lazy">
                     <figcaption>Cyber District</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/SkyJumper.jpg" alt="Captura del juego Sky Jumper" width="599" height="354" loading="lazy">
+                    <img src="images/SkyJumper.jpg" alt="Captura del juego Sky Jumper" data-i18n-attr="alt:gallery.alt" data-i18n-name="Sky Jumper" width="599" height="354" loading="lazy">
                     <figcaption>Sky Jumper</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/JellyTubes.jpg" alt="Captura del juego Jelly Tubes" width="595" height="438" loading="lazy">
+                    <img src="images/JellyTubes.jpg" alt="Captura del juego Jelly Tubes" data-i18n-attr="alt:gallery.alt" data-i18n-name="Jelly Tubes" width="595" height="438" loading="lazy">
                     <figcaption>Jelly Tubes</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/LetterGame.jpg" alt="Captura del juego Wood Letters" width="597" height="263" loading="lazy">
+                    <img src="images/LetterGame.jpg" alt="Captura del juego Wood Letters" data-i18n-attr="alt:gallery.alt" data-i18n-name="Wood Letters" width="597" height="263" loading="lazy">
                     <figcaption>Wood Letters</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/Runner.jpg" alt="Captura del juego Football Runner" width="596" height="259" loading="lazy">
+                    <img src="images/Runner.jpg" alt="Captura del juego Football Runner" data-i18n-attr="alt:gallery.alt" data-i18n-name="Football Runner" width="596" height="259" loading="lazy">
                     <figcaption>Football Runner</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/StickmanRunner.jpg" alt="Captura del juego Stickman Runner" width="597" height="348" loading="lazy">
+                    <img src="images/StickmanRunner.jpg" alt="Captura del juego Stickman Runner" data-i18n-attr="alt:gallery.alt" data-i18n-name="Stickman Runner" width="597" height="348" loading="lazy">
                     <figcaption>Stickman Runner</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/VirusX.jpg" alt="Captura del juego VirusX" width="596" height="398" loading="lazy">
+                    <img src="images/VirusX.jpg" alt="Captura del juego VirusX" data-i18n-attr="alt:gallery.alt" data-i18n-name="VirusX" width="596" height="398" loading="lazy">
                     <figcaption>VirusX</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/SplashHex.jpg" alt="Captura del juego Splash Hex" width="598" height="351" loading="lazy">
+                    <img src="images/SplashHex.jpg" alt="Captura del juego Splash Hex" data-i18n-attr="alt:gallery.alt" data-i18n-name="Splash Hex" width="598" height="351" loading="lazy">
                     <figcaption>Splash Hex</figcaption>
                 </figure>
             </div>
@@ -127,96 +148,96 @@
 
         <article>
             <header>
-                <h2>Proyectos académicos (DAM)</h2>
+                <h2 data-i18n="projects.academic.title">Proyectos académicos (DAM)</h2>
             </header>
-            <p>Prácticas y trabajos del ciclo de Desarrollo de Aplicaciones Multiplataforma, publicados en <a href="https://github.com/siarheilukashou25-maker">GitHub</a>.</p>
+            <p data-i18n="projects.academic.intro">Prácticas y trabajos del ciclo de Desarrollo de Aplicaciones Multiplataforma, publicados en <a href="https://github.com/siarheilukashou25-maker">GitHub</a>.</p>
             <div class="repo-grid">
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/Calculadora-de-IMC-Java-Swing">Calculadora de IMC</a></h3>
-                    <p>Aplicación de escritorio en Java Swing que calcula el Índice de Masa Corporal siguiendo el patrón MVC.</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/Calculadora-de-IMC-Java-Swing" data-i18n="projects.repo.bmi.title">Calculadora de IMC</a></h3>
+                    <p data-i18n="projects.repo.bmi.desc">Aplicación de escritorio en Java Swing que calcula el Índice de Masa Corporal siguiendo el patrón MVC.</p>
                     <p class="stack">Java · Swing · MVC</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/AEE_Practica-MACHO">Gestión de empleados con ficheros</a></h3>
-                    <p>Práctica en pareja: aplicación Java que crea y consulta un fichero binario de empleados (listados, sueldos, provincias) con planificación de tiempos y diagrama UML.</p>
-                    <p class="stack">Java · Ficheros · UML</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/AEE_Practica-MACHO" data-i18n="projects.repo.employees.title">Gestión de empleados con ficheros</a></h3>
+                    <p data-i18n="projects.repo.employees.desc">Práctica en pareja: aplicación Java que crea y consulta un fichero binario de empleados (listados, sueldos, provincias) con planificación de tiempos y diagrama UML.</p>
+                    <p class="stack" data-i18n="projects.repo.employees.stack">Java · Ficheros · UML</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/RefactorizacionLegacy">Refactorización de código legacy</a></h3>
-                    <p>Refactorización de un módulo de facturación heredado: renombrado de parámetros con el IDE, tests con JUnit 5 y documentación JavaDoc.</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/RefactorizacionLegacy" data-i18n="projects.repo.legacy.title">Refactorización de código legacy</a></h3>
+                    <p data-i18n="projects.repo.legacy.desc">Refactorización de un módulo de facturación heredado: renombrado de parámetros con el IDE, tests con JUnit 5 y documentación JavaDoc.</p>
                     <p class="stack">Java · JUnit 5 · Refactoring</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/Auditoria-ASG-y-Refactorizacion-Sostenible">Auditoría ASG y refactorización sostenible</a></h3>
-                    <p>Análisis del impacto ambiental de una web y medidas para reducirlo: optimización de imágenes, fuentes del sistema y menos solicitudes de red.</p>
-                    <p class="stack">Green IT · Rendimiento web</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/Auditoria-ASG-y-Refactorizacion-Sostenible" data-i18n="projects.repo.esg.title">Auditoría ASG y refactorización sostenible</a></h3>
+                    <p data-i18n="projects.repo.esg.desc">Análisis del impacto ambiental de una web y medidas para reducirlo: optimización de imágenes, fuentes del sistema y menos solicitudes de red.</p>
+                    <p class="stack" data-i18n="projects.repo.esg.stack">Green IT · Rendimiento web</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/GreenTech-MVP-Sostenible_0.1_Siarhei_Lukashou">GreenTech MVP sostenible</a></h3>
-                    <p>Optimización de una web: eliminación de Bootstrap, jQuery y Google Fonts, JavaScript nativo, lazy loading, bundling y minificación.</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/GreenTech-MVP-Sostenible_0.1_Siarhei_Lukashou" data-i18n="projects.repo.greentech.title">GreenTech MVP sostenible</a></h3>
+                    <p data-i18n="projects.repo.greentech.desc">Optimización de una web: eliminación de Bootstrap, jQuery y Google Fonts, JavaScript nativo, lazy loading, bundling y minificación.</p>
                     <p class="stack">HTML · CSS · JavaScript</p>
                 </div>
                 <div>
                     <h3><a href="https://github.com/siarheilukashou25-maker/Desarrollo-de-MVP">Deep-Space Agency (MVP)</a></h3>
-                    <p>MVP de una base de datos de exoplanetas: catálogo en XML validado con XSD y consulta XQuery que filtra los planetas por temperatura y genera la página HTML.</p>
+                    <p data-i18n="projects.repo.deepspace.desc">MVP de una base de datos de exoplanetas: catálogo en XML validado con XSD y consulta XQuery que filtra los planetas por temperatura y genera la página HTML.</p>
                     <p class="stack">XML · XSD · XQuery · HTML</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/Laboratorio-Ecosistema-Odoo">Laboratorio Ecosistema Odoo</a></h3>
-                    <p>Configuración de Odoo: importación de clientes, productos almacenables, presupuestos, facturas y generación de PDF.</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/Laboratorio-Ecosistema-Odoo" data-i18n="projects.repo.odoo.title">Laboratorio Ecosistema Odoo</a></h3>
+                    <p data-i18n="projects.repo.odoo.desc">Configuración de Odoo: importación de clientes, productos almacenables, presupuestos, facturas y generación de PDF.</p>
                     <p class="stack">Odoo · ERP</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/LMSGI_UD07_Lukashou_Siarhei">Informe de factura en Odoo (QWeb)</a></h3>
-                    <p>Plantilla QWeb para un informe de factura personalizado en Odoo y explicación de su funcionamiento.</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/LMSGI_UD07_Lukashou_Siarhei" data-i18n="projects.repo.qweb.title">Informe de factura en Odoo (QWeb)</a></h3>
+                    <p data-i18n="projects.repo.qweb.desc">Plantilla QWeb para un informe de factura personalizado en Odoo y explicación de su funcionamiento.</p>
                     <p class="stack">Odoo · QWeb · XML</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/UD05.1XSD-RegEx">XSD con expresiones regulares</a></h3>
-                    <p>Esquema XML/XSD para alumnos de una escuela e-learning con validación de email y teléfono mediante expresiones regulares.</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/UD05.1XSD-RegEx" data-i18n="projects.repo.regex.title">XSD con expresiones regulares</a></h3>
+                    <p data-i18n="projects.repo.regex.desc">Esquema XML/XSD para alumnos de una escuela e-learning con validación de email y teléfono mediante expresiones regulares.</p>
                     <p class="stack">XML · XSD · RegEx</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/Auditor-a-de-Infraestructura-Cloud">Auditoría de infraestructura cloud</a></h3>
-                    <p>Consultas XPath sobre un catálogo de infraestructura cloud y validación con XSD (grupos y restricciones de unicidad).</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/Auditor-a-de-Infraestructura-Cloud" data-i18n="projects.repo.cloud.title">Auditoría de infraestructura cloud</a></h3>
+                    <p data-i18n="projects.repo.cloud.desc">Consultas XPath sobre un catálogo de infraestructura cloud y validación con XSD (grupos y restricciones de unicidad).</p>
                     <p class="stack">XML · XPath · XSD</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/LDM-Tarea-XPath-VuestroNombre">Retos XPath</a></h3>
-                    <p>Consultas XPath con filtros por atributos, valores y posiciones usando XPath Notebook.</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/LDM-Tarea-XPath-VuestroNombre" data-i18n="projects.repo.xpath.title">Retos XPath</a></h3>
+                    <p data-i18n="projects.repo.xpath.desc">Consultas XPath con filtros por atributos, valores y posiciones usando XPath Notebook.</p>
                     <p class="stack">XML · XPath</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/Taller-Pr-ctico-01-Ingenier-a-Inversa-con-XQuery-y-BaseX">Ingeniería inversa con XQuery y BaseX</a></h3>
-                    <p>Consultas XQuery sobre un catálogo de libros: filtrado, ordenación y agregaciones con distinct-values() y count().</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/Taller-Pr-ctico-01-Ingenier-a-Inversa-con-XQuery-y-BaseX" data-i18n="projects.repo.xquery.title">Ingeniería inversa con XQuery y BaseX</a></h3>
+                    <p data-i18n="projects.repo.xquery.desc">Consultas XQuery sobre un catálogo de libros: filtrado, ordenación y agregaciones con distinct-values() y count().</p>
                     <p class="stack">XQuery · BaseX</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/EDD_UML_Lukashou_Siarhei">Diagramas de actividad UML</a></h3>
-                    <p>Investigación de los nodos UML (fork, decisión, unión) y modelado del proceso de compra con un diagrama de actividad.</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/EDD_UML_Lukashou_Siarhei" data-i18n="projects.repo.activity.title">Diagramas de actividad UML</a></h3>
+                    <p data-i18n="projects.repo.activity.desc">Investigación de los nodos UML (fork, decisión, unión) y modelado del proceso de compra con un diagrama de actividad.</p>
                     <p class="stack">UML</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/Actividad-individual-13---Bolet-n-Diagramas-de-Casos-de-Uso-3">Diagrama de estados UML</a></h3>
-                    <p>Diagrama de estados de un proceso de descarga: pausa, reanudación, cancelación, reintentos ante errores de red y verificación de integridad.</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/Actividad-individual-13---Bolet-n-Diagramas-de-Casos-de-Uso-3" data-i18n="projects.repo.state.title">Diagrama de estados UML</a></h3>
+                    <p data-i18n="projects.repo.state.desc">Diagrama de estados de un proceso de descarga: pausa, reanudación, cancelación, reintentos ante errores de red y verificación de integridad.</p>
                     <p class="stack">UML</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/SI-Bitacora3-AccesoRemoto">Acceso remoto con SSH y RDP</a></h3>
-                    <p>Laboratorio de conexión remota a un Ubuntu Server en máquina virtual por SSH y RDP, con resolución de problemas de claves de host.</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/SI-Bitacora3-AccesoRemoto" data-i18n="projects.repo.ssh.title">Acceso remoto con SSH y RDP</a></h3>
+                    <p data-i18n="projects.repo.ssh.desc">Laboratorio de conexión remota a un Ubuntu Server en máquina virtual por SSH y RDP, con resolución de problemas de claves de host.</p>
                     <p class="stack">Linux · SSH · RDP</p>
                 </div>
                 <div>
-                    <h3><a href="https://github.com/siarheilukashou25-maker/Bit-cora-III-Conexiones-Empresariales-Taller-T-cnico-Operaci-n-Escudo">Seguridad y auditoría: Syslog</a></h3>
-                    <p>Investigación sobre Syslog, clasificación de eventos por facility y severity, y gestión centralizada de logs.</p>
-                    <p class="stack">Sistemas · Seguridad</p>
+                    <h3><a href="https://github.com/siarheilukashou25-maker/Bit-cora-III-Conexiones-Empresariales-Taller-T-cnico-Operaci-n-Escudo" data-i18n="projects.repo.syslog.title">Seguridad y auditoría: Syslog</a></h3>
+                    <p data-i18n="projects.repo.syslog.desc">Investigación sobre Syslog, clasificación de eventos por facility y severity, y gestión centralizada de logs.</p>
+                    <p class="stack" data-i18n="projects.repo.syslog.stack">Sistemas · Seguridad</p>
                 </div>
             </div>
         </article>
     </main>
 
     <footer>
-        <p>&copy; 2026 Lukashou Siarhei. Todos los derechos reservados.</p>
+        <p data-i18n="footer.rights">&copy; 2026 Lukashou Siarhei. Todos los derechos reservados.</p>
         <div>
             <ol>
                 <li><a href="https://www.linkedin.com/in/sergei-lukashov/">LinkedIn</a></li>
@@ -225,6 +246,7 @@
             </ol>
         </div>
     </footer>
+    <script src="js/i18n.js" defer></script>
     <script src="js/gallery.js" defer></script>
 </body>
 </html>

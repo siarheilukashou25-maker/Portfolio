@@ -3,11 +3,20 @@
     const grid = document.querySelector(".games-grid");
     if (!grid) return;
 
+    // Textos traducidos por js/i18n.js (con el español como respaldo si no está cargado)
+    const FALLBACK = {
+        "gallery.zoom": "Ampliar captura de {name}",
+        "gallery.dialog": "Captura ampliada"
+    };
+    function t(key, name) {
+        if (window.i18n) return window.i18n.t(key, { name: name });
+        return FALLBACK[key].replace("{name}", name);
+    }
+
     const lightbox = document.createElement("div");
     lightbox.className = "lightbox";
     lightbox.setAttribute("role", "dialog");
     lightbox.setAttribute("aria-modal", "true");
-    lightbox.setAttribute("aria-label", "Captura ampliada");
     lightbox.tabIndex = -1;
     lightbox.hidden = true;
     lightbox.innerHTML = '<figure><img alt=""><figcaption></figcaption></figure>';
@@ -45,11 +54,18 @@
         if (lastCard) lastCard.focus();
     }
 
-    grid.querySelectorAll("figure").forEach(function (card) {
-        const title = card.querySelector("figcaption").textContent;
+    const cards = grid.querySelectorAll("figure");
+
+    function updateLabels() {
+        lightbox.setAttribute("aria-label", t("gallery.dialog"));
+        cards.forEach(function (card) {
+            card.setAttribute("aria-label", t("gallery.zoom", card.querySelector("figcaption").textContent));
+        });
+    }
+
+    cards.forEach(function (card) {
         card.tabIndex = 0;
         card.setAttribute("role", "button");
-        card.setAttribute("aria-label", "Ampliar captura de " + title);
         card.addEventListener("click", function () {
             open(card);
         });
@@ -62,6 +78,9 @@
             }
         });
     });
+
+    updateLabels();
+    document.addEventListener("i18n:change", updateLabels);
 
     lightbox.addEventListener("click", close);
     document.addEventListener("keydown", function (e) {
