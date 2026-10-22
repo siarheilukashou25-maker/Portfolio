@@ -607,3 +607,144 @@ body.no-scroll {
 .i18n-pending body {
     visibility: hidden;
 }
+
+/* ===== Pie de página siempre abajo (páginas cortas, como Contacto) ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+/* ===== "Mi Portfolio" enlaza a la página de inicio ===== */
+body > header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ===== Iconos ===== */
+.icon {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+}
+
+.flag {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--color-border);
+}
+
+section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.h-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.tags li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tags li .icon + .icon {
+    margin-left: -4px;
+}
+
+.hero .location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hero .location .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.timeline .meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.timeline .meta .icon {
+    width: 14px;
+    height: 14px;
+}
+
+/* Logotipo de la empresa o del centro a la izquierda de cada entrada */
+.timeline > li.org {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    column-gap: 14px;
+}
+
+.timeline > li.org > * {
+    grid-column: 2;
+}
+
+.timeline > li.org > .org-logo {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    background: #fff;
+    object-fit: cover;
+}
+
+.contact-grid h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.phone-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.phone-line a:first-child {
+    color: inherit;
+}
+
+.icon-link {
+    display: inline-flex;
+    transition: transform 0.2s;
+}
+
+.icon-link:hover {
+    transform: scale(1.12);
+}
+
+.icon-link .icon {
+    width: 22px;
+    height: 22px;
+}
+
+footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+@media (max-width: 640px) {
+    .hero .location {
+        justify-content: center;
+    }
+}

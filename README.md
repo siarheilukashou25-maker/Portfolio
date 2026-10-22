@@ -28,7 +28,9 @@ El sitio está disponible en español (idioma por defecto), inglés, ruso y biel
 │   ├── i18n.js                cambio de idioma del sitio (es, en, ru, be) y traducciones
 │   └── gallery.js             ampliación de las capturas en la galería de juegos
 ├── images/                    foto de perfil, capturas de los juegos e imagen para redes sociales
-│   └── flags/                 banderas del selector de idioma
+│   ├── flags/                 banderas del selector de idioma
+│   ├── icons/                 iconos de habilidades, contacto y pie de página
+│   └── logos/                 logotipos de empresas y centros educativos
 ├── GameOnCocos/               build web de Cocos Creator del playable ad (se muestra en proyectos.html)
 └── README.md                  este archivo
 ```
@@ -58,6 +60,10 @@ El juego de Cocos Creator necesita un servidor HTTP y no carga si se abre el arc
 ## Créditos
 
 Banderas: [circle-flags](https://github.com/HatScripts/circle-flags) (licencia MIT).
+
+Iconos: [Devicon](https://devicon.dev/) (MIT), [Simple Icons](https://simpleicons.org/) (CC0) y [Lucide](https://lucide.dev/) (ISC).
+
+Los logotipos de empresas y centros educativos pertenecen a sus respectivos propietarios.
 
 ## Autor
 
