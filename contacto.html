@@ -56,32 +56,33 @@
         <h1 data-i18n="nav.contact">Contacto</h1>
         <p data-i18n="contact.intro">¿Tienes alguna duda o sugerencia? Completa el formulario y me pondré en contacto contigo lo antes posible.</p>
 
-        <form id="contact-form" action="https://formsubmit.co/siarhei.lukashou.prof@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Nuevo mensaje desde el portfolio">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Clave de acceso de Web3Forms (https://web3forms.com): clave pública recibida por email -->
+            <input type="hidden" name="access_key" value="8d8a7eae-7aed-4980-9e25-90c9718309dd">
+            <input type="hidden" name="from_name" value="Portfolio lukashou.pages.dev">
+            <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div>
-                <label for="nombre" data-i18n="contact.name">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej: Siarhei Lukashou" required data-i18n-attr="placeholder:contact.namePh">
+                <label for="name" data-i18n="contact.name">Nombre completo</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Ej: Siarhei Lukashou" required data-i18n-attr="placeholder:contact.namePh">
             </div>
 
             <div>
                 <label for="email" data-i18n="contact.email">Correo electrónico</label>
-                <input type="email" id="email" name="email" placeholder="Ej: tuemail@ejemplo.com" required data-i18n-attr="placeholder:contact.emailPh">
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="Ej: tuemail@ejemplo.com" required data-i18n-attr="placeholder:contact.emailPh">
             </div>
 
             <div>
-                <label for="asunto" data-i18n="contact.subject">Asunto</label>
-                <input type="text" id="asunto" name="asunto" placeholder="Ej: Contrato" required data-i18n-attr="placeholder:contact.subjectPh">
+                <label for="subject" data-i18n="contact.subject">Asunto</label>
+                <input type="text" id="subject" name="subject" placeholder="Ej: Contrato" required data-i18n-attr="placeholder:contact.subjectPh">
             </div>
 
             <div>
-                <label for="mensaje" data-i18n="contact.message">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Describe tus dudas o sugerencias..." rows="6" required data-i18n-attr="placeholder:contact.messagePh"></textarea>
+                <label for="message" data-i18n="contact.message">Mensaje</label>
+                <textarea id="message" name="message" placeholder="Describe tus dudas o sugerencias..." rows="6" required data-i18n-attr="placeholder:contact.messagePh"></textarea>
             </div>
 
             <button type="submit" data-i18n="contact.send">Enviar mensaje</button>
+            <p class="form-status" role="status" aria-live="polite" hidden></p>
         </form>
 
         <section>
@@ -126,5 +127,6 @@
         </div>
     </footer>
     <script src="js/i18n.js" defer></script>
+    <script src="js/contact.js" defer></script>
 </body>
 </html>

@@ -748,3 +748,62 @@ footer a {
         justify-content: center;
     }
 }
+
+/* ===== Estado del envío del formulario ===== */
+.form-status {
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.form-status.is-sending {
+    color: var(--color-primary);
+    background: #e8f0f9;
+}
+
+.form-status.is-success {
+    color: #1e6b3a;
+    background: #e6f4ea;
+}
+
+.form-status.is-error {
+    color: #9b2226;
+    background: #fdecec;
+}
+
+.form-status a {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+button.is-sending {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: wait;
+    opacity: 0.85;
+}
+
+button.is-sending::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button.is-sending::before {
+        animation-duration: 2.4s;
+    }
+}

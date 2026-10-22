@@ -11,7 +11,7 @@ Sitio web personal de Siarhei Lukashou, desarrollador de videojuegos en Unity y 
   - Un playable ad que se puede jugar en el navegador.
   - Una galería con capturas de otros juegos; al hacer clic, cada captura se amplía.
   - Proyectos académicos del ciclo DAM, con enlaces a GitHub.
-- **`contacto.html` (Contacto):** formulario que envía los mensajes por email mediante FormSubmit, y otros medios de contacto.
+- **`contacto.html` (Contacto):** formulario que envía los mensajes por email mediante Web3Forms, y otros medios de contacto.
 
 El sitio está disponible en español (idioma por defecto), inglés, ruso y bielorruso. El idioma se elige con las banderas de la cabecera y se recuerda al navegar entre páginas.
 
@@ -26,6 +26,7 @@ El sitio está disponible en español (idioma por defecto), inglés, ruso y biel
 │   └── styles.css             estilos de todo el sitio
 ├── js/
 │   ├── i18n.js                cambio de idioma del sitio (es, en, ru, be) y traducciones
+│   ├── contact.js             envío del formulario de contacto con Web3Forms
 │   └── gallery.js             ampliación de las capturas en la galería de juegos
 ├── images/                    foto de perfil, capturas de los juegos e imagen para redes sociales
 │   ├── flags/                 banderas del selector de idioma
@@ -43,7 +44,7 @@ El sitio está disponible en español (idioma por defecto), inglés, ruso y biel
 - CSS3
 - JavaScript
 - Cocos Creator / TypeScript (build del playable ad)
-- FormSubmit (envío del formulario de contacto)
+- Web3Forms (envío del formulario de contacto)
 
 ## Cómo verlo
 

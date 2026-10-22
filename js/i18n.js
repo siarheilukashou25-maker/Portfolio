@@ -6,6 +6,12 @@
     // El español está escrito directamente en el HTML; aquí solo están las traducciones
     // y los textos que se generan desde JavaScript.
     const ES_JS = {
+        "contact.status.sending": "Enviando…",
+        "contact.status.sent": "¡Mensaje enviado! Te responderé lo antes posible.",
+        "contact.status.error": "No se ha podido enviar el mensaje. Inténtalo de nuevo más tarde.",
+        "contact.status.timeout": "El servidor no responde. Inténtalo de nuevo más tarde.",
+        "contact.status.noKey": "El formulario todavía no está configurado.",
+        "contact.status.fallback": "También puedes escribirme a {email}.",
         "gallery.alt": "Captura del juego {name}",
         "gallery.zoom": "Ampliar captura de {name}",
         "gallery.dialog": "Captura ampliada",
@@ -14,6 +20,12 @@
 
     const TRANSLATIONS = {
         en: {
+            "contact.status.sending": "Sending…",
+            "contact.status.sent": "Message sent! I will get back to you as soon as possible.",
+            "contact.status.error": "The message could not be sent. Please try again later.",
+            "contact.status.timeout": "The server is not responding. Please try again later.",
+            "contact.status.noKey": "The form is not set up yet.",
+            "contact.status.fallback": "You can also write to me at {email}.",
             "site.title": "My Portfolio",
             "nav.home": "Home",
             "nav.projects": "Projects",
@@ -152,6 +164,12 @@
             "lang.label": "Language"
         },
         ru: {
+            "contact.status.sending": "Отправка…",
+            "contact.status.sent": "Сообщение отправлено! Я отвечу вам как можно скорее.",
+            "contact.status.error": "Не удалось отправить сообщение. Попробуйте ещё раз позже.",
+            "contact.status.timeout": "Сервер не отвечает. Попробуйте ещё раз позже.",
+            "contact.status.noKey": "Форма пока не настроена.",
+            "contact.status.fallback": "Также можно написать мне на {email}.",
             "site.title": "Моё портфолио",
             "nav.home": "Главная",
             "nav.projects": "Проекты",
@@ -290,6 +308,12 @@
             "lang.label": "Язык"
         },
         be: {
+            "contact.status.sending": "Адпраўка…",
+            "contact.status.sent": "Паведамленне адпраўлена! Я адкажу вам як мага хутчэй.",
+            "contact.status.error": "Не ўдалося адправіць паведамленне. Паспрабуйце яшчэ раз пазней.",
+            "contact.status.timeout": "Сервер не адказвае. Паспрабуйце яшчэ раз пазней.",
+            "contact.status.noKey": "Форма пакуль не наладжана.",
+            "contact.status.fallback": "Таксама можна напісаць мне на {email}.",
             "site.title": "Маё партфоліо",
             "nav.home": "Галоўная",
             "nav.projects": "Праекты",
