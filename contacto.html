@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de contacto - Ponte en contacto conmigo">
+    <title>Contacto - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contacto</h1>
+        <p>¿Tienes alguna duda o sugerencia? Completa el formulario y me pondré en contacto contigo lo antes posible.</p>
+
+        <form id="contact-form" action="https://formsubmit.co/siarhei.lukashou.prof@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde el portfolio">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Siarhei Lukashou" required>
+            </div>
+
+            <div>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Ej: tuemail@ejemplo.com" required>
+            </div>
+
+            <div>
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" placeholder="Ej: Contrato" required>
+            </div>
+
+            <div>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Describe tus dudas o sugerencias..." rows="6" required></textarea>
+            </div>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+
+        <section>
+            <h2>Otros medios de contacto</h2>
+            <div class="contact-grid">
+                <div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:siarhei.lukashou.prof@gmail.com">siarhei.lukashou.prof@gmail.com</a></p>
+                </div>
+                <div>
+                    <h3>Teléfono</h3>
+                    <p>+34 606 70 14 82</p>
+                </div>
+                <div>
+                    <h3>Telegram</h3>
+                    <p><a href="https://t.me/endi_kayfman">Siarhei Lukashou</a></p>
+                </div>
+                <div>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/sergei-lukashov/">Sergei Lukashov</a></p>
+                </div>
+                <div>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/siarheilukashou25-maker">siarheilukashou25-maker</a></p>
+                </div>
+                <div>
+                    <h3>Ubicación</h3>
+                    <p>Sevilla, España</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lukashou Siarhei. Todos los derechos reservados.</p>
+        <div>
+            <ol>
+                <li><a href="https://www.linkedin.com/in/sergei-lukashov/">LinkedIn</a></li>
+                <li><a href="https://github.com/siarheilukashou25-maker">GitHub</a></li>
+                <li><a href="https://t.me/endi_kayfman">Telegram</a></li>
+            </ol>
+        </div>
+    </footer>
+</body>
+</html>

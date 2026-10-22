@@ -1,2 +1,63 @@
-# Portfolio
- Repositorio que contiene codigo fuente de mi portfolio
+
+# Portfolio - Siarhei Lukashou
+
+Sitio web personal de Siarhei Lukashou, desarrollador de videojuegos en Unity y de aplicaciones multiplataforma. Presenta mi perfil profesional, mis proyectos y mis datos de contacto, y está pensado para empresas y reclutadores.
+
+## Contenido del sitio
+
+- **`index.html` (Inicio):** presentación, experiencia profesional, formación académica, habilidades, idiomas e intereses.
+- **`proyectos.html` (Proyectos):**
+  - Proyectos destacados: By Me Too!, Screw All y Passenger Delivery.
+  - Un playable ad que se puede jugar en el navegador.
+  - Una galería con capturas de otros juegos; al hacer clic, cada captura se amplía.
+  - Proyectos académicos del ciclo DAM, con enlaces a GitHub.
+- **`contacto.html` (Contacto):** formulario que envía los mensajes por email mediante FormSubmit, y otros medios de contacto.
+
+## Estructura del repositorio
+
+```text
+.
+├── index.html                 página de inicio
+├── proyectos.html             página de proyectos
+├── contacto.html              página de contacto
+├── css/
+│   └── styles.css             estilos de todo el sitio
+├── js/
+│   └── gallery.js             ampliación de las capturas en la galería de juegos
+├── images/                    foto de perfil y capturas de los juegos
+├── GameOnCocos/               build web de Cocos Creator del playable ad (se muestra en proyectos.html)
+└── README.md                  este archivo
+```
+
+`GameOnCocos/` es el build web del juego tal como lo exporta Cocos Creator 3.7 (motor, escenas y recursos). Por eso sus archivos no se editan a mano. El código fuente del juego está en https://github.com/EndiKayfman/TestFreePlay.
+
+## Tecnologías
+
+- HTML5
+- CSS3
+- JavaScript
+- Cocos Creator / TypeScript (build del playable ad)
+- FormSubmit (envío del formulario de contacto)
+
+## Cómo verlo
+
+Desde la carpeta del repositorio, ejecuta:
+
+```bash
+python3 -m http.server 8000
+```
+
+Después abre http://localhost:8000 en el navegador.
+
+El juego de Cocos Creator necesita un servidor HTTP y no carga si se abre el archivo con doble clic. En GitHub Pages o en cualquier hosting estático funciona sin configuración adicional.
+
+## Autor
+
+Siarhei Lukashou
+
+- Email: siarhei.lukashou.prof@gmail.com
+- LinkedIn: [Siarhei Lukashou](https://www.linkedin.com/in/sergei-lukashov/)
+- GitHub: [siarheilukashou25-maker](https://github.com/siarheilukashou25-maker)
+- Telegram: [Siarhei Lukashou](https://t.me/endi_kayfman)
+
+© 2026 Lukashou Siarhei. Todos los derechos reservados.

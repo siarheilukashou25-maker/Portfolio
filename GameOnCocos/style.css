@@ -1,0 +1,27 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+#GameDiv,
+#Cocos3dGameContainer {
+    width: 100%;
+    height: 100%;
+}
+
+/* En pantallas con devicePixelRatio > 1 el motor puede dar al canvas un tamaño CSS mayor que el iframe */
+#GameCanvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+canvas {
+    display: block;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+}
